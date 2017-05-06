@@ -1,0 +1,17 @@
+<h1>DNI</h1>
+
+<form action="" method="post">
+    DNI <input type="text" name="dni">
+    Nombre <input type="text" name="nombre">
+    <input type="submit" value="Enviar">
+</form>
+
+<ul>
+    {% for dni in document %}
+        <li>
+            {{ dni.doc }}
+            <a href="/eliminar/{{ dni.id }}">(eliminar)</a>
+            <a href="/editar/{{ dni.id }}">(editar)</a>
+        </li>
+    {% endfor %}
+</ul>
